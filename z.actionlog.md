@@ -115,3 +115,14 @@
 - Root cause: mobile dropdown background was rgba(15,16,20,0.98) sitting inside a translucent, backdrop-blurred header over true-black content, so hero text showed through.
 - Fixed: dropdown now solid #000 with a drop shadow. Header goes fully opaque when menu open via `.menu-open` class (JS toggle) + `:has()` fallback.
 - Verified CSS balance + JS consistency. Committed + pushed (UAT auto-updates).
+
+---
+
+# 2026-09-06 - User Request
+
+> "hmmm... even the local copy still has this issue" (mobile menu still transparent after first fix)
+
+**Actions Taken:**
+- First fix (solid dropdown bg) didn't resolve it -> real root cause was `backdrop-filter: blur` + translucent rgba header background bleeding the hero through the dropdown region.
+- Definitive fix: removed backdrop-filter entirely. Header is now transparent at top (over hero), solid #0a0a0c once scrolled. Menu-open forces solid #000 header (!important) regardless of scroll position, so the dropdown never shows bleed-through.
+- Verified: zero backdrop-filter refs, no translucent header bg, CSS balanced. Committed + pushed.

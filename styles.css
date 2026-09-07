@@ -82,13 +82,11 @@ img { max-width: 100%; display: block; }
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
-    background: rgba(15, 16, 20, 0.55);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: transparent;
     transition: background .3s ease, padding .3s ease, box-shadow .3s ease;
 }
 .site-header.is-scrolled {
-    background: rgba(15, 16, 20, 0.92);
+    background: #0a0a0c;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
 }
 .nav-container {
@@ -417,9 +415,13 @@ img { max-width: 100%; display: block; }
     .approach-grid { grid-template-columns: 1fr; }
 
     .nav-toggle { display: flex; }
-    /* when the mobile menu is open, make the whole header solid so nothing bleeds through */
+    /* when the mobile menu is open, force the whole header solid (even at top of page,
+       before scroll) so nothing bleeds through the dropdown */
     .site-header.menu-open,
-    .site-header:has(.nav-links.is-open) { background: #000; }
+    .site-header:has(.nav-links.is-open) {
+        background: #000 !important;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    }
     .nav-links {
         position: absolute;
         top: 100%; left: 0; right: 0;
