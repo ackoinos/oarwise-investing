@@ -21,6 +21,8 @@
 ## Decisions
 - [ ] Confirm with Darren whether he uses HighLevel for CRM/email/booking, or just the website
       (if just the website, static rebuild saves the monthly subscription)
+- [ ] Confirm Darren's PRIMARY logo lockup (horizontal vs stacked) so the site matches his
+      business cards / print materials. Currently: horizontal in nav/footer, stacked for favicon.
 
 ## Deploy
 - [ ] Create GitHub repo (public, for free Pages)

@@ -30,10 +30,18 @@ Same pattern as harmony-myotherapy.
 
 ## Graphics
 Real brand assets were pulled from the original HighLevel site and reused (they are on-brand: white line-art on black with a signature water-ripple motif). Renamed from CDN hashes to readable names:
-- `images/logo-wide.png` - nav + footer logo. Processed from the original: black background knocked out to transparency and auto-cropped so the white line-art sits cleanly on the dark site. (The raw originals had an opaque black background baked in, which showed as an ugly box and squashed the mark inside excess padding.)
-- `images/logo-stacked.png` - vertical/stacked variant (oars over "OWI" over ripples), same transparent treatment. Spare, not currently placed.
-- `images/logo-horizontal.png` / `images/logo-square.png` - raw originals (opaque black bg). logo-square still used for favicon/social (black bg is fine at favicon size).
-- `scripts/process-logos.py` - reproducible logo cleanup (knockout + autocrop) via Pillow
+Darren has TWO official brand lockups (both pulled from his original site, both true to form - we did not re-orient or invent anything):
+- **Horizontal lockup** (oars + "OWI" + ripples in a row) -> `images/logo-wide.png`. Used in nav + footer. Standard placement for a website header; this is what his own site used.
+- **Stacked/vertical lockup** (oars over "OWI" over ripples) -> `images/logo-stacked.png`. Used for square/favicon contexts.
+
+Using the horizontal lockup in the header and the stacked lockup as a square icon is normal brand practice and is NOT inconsistent with a vertically-formatted business card. **Open question for Darren:** confirm which lockup is his primary/canonical mark so we honour it. Never stretch either lockup - each is placed at its natural aspect ratio.
+
+All logos and the four program icons were processed to transparency: the raw source files had an opaque black background baked in (which showed as black boxes on the dark site and, when stretched, squashed the mark). `scripts/process-logos.py` knocks the black out to transparency, recolors kept pixels to pure white, and autocrops padding so each mark sits cleanly at its own aspect ratio.
+
+- `images/logo-wide.png` / `images/logo-stacked.png` - cleaned transparent lockups (in use)
+- `images/icon-*.png` - cleaned transparent program icons (in use)
+- `images/logo-horizontal.png` / `images/logo-square.png` - raw originals (opaque black bg) kept as source. logo-square still referenced for favicon/social (black bg is acceptable at favicon size)
+- `scripts/process-logos.py` - reproducible cleanup (knockout + autocrop) via Pillow
 - `images/darren.jpg` - Darren's headshot (whitewater backdrop), About section
 - `images/icon-mindset.png` - Mindset Mastery program (head + lightbulb + gear)
 - `images/icon-financial.png` - Financial Literacy program (person reading, $ signs)

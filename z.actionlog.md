@@ -63,3 +63,16 @@
 - Verified objectively: all solid pixels are pure white (11741/11741, 7634/7634), crisp edges, transparent bg.
 - Produced `logo-wide.png` (437x135) + `logo-stacked.png` (249x396). Wired the wide transparent logo into nav + footer, adjusted logo height. Favicon/OG still use square original.
 - Verified image paths + HTML. Updated readme. Committed.
+
+---
+
+# 2026-09-06 - User Request
+
+> "we really should keep the logo true to form... if the other items like business cards are formatted vertically, it's going to create confusion... Also the logos for the other section look funny with the black and white logo against the background."
+
+**Actions Taken:**
+- Clarified brand handling: Darren has TWO official lockups (horizontal + stacked), both pulled from his own site. Using horizontal in nav and stacked for favicon is standard practice, not inconsistent with a vertical business card. Neither is stretched. Added a todo to confirm his PRIMARY lockup with him.
+- Confirmed source filenames were swapped: logo-square.png = the horizontal lockup (437x135), logo-horizontal.png = the stacked lockup (249x396). Mapped by content, not filename.
+- Extended `process-logos.py` to also process the 4 program icons. Gave all 4 icons the same black-knockout-to-transparency treatment so they float as white line-art on the cards instead of sitting in mismatched black tiles.
+- Simplified `.program-icon` CSS: removed the dark tile background + border, icons now sit transparent on the card.
+- Verified all 6 assets: pure-white solid pixels, 61-87% transparent backgrounds. Verified HTML paths + CSS balance. Updated readme + todo. Committed.

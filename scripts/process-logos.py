@@ -72,6 +72,21 @@ def process(src_name: str, dst_name: str) -> None:
     print(f"OK  {src_name} {before} -> {dst_name} {img.size}")
 
 
+# (src, dst). Each source is white line-art on an opaque black background;
+# we knock the black out to transparency and autocrop so the art sits cleanly
+# on the dark site at its own natural aspect ratio (never stretched).
+JOBS = [
+    # official brand lockups (kept true to form, not re-oriented)
+    ("logo-horizontal.png", "logo-horizontal-clear.png"),  # horizontal lockup -> nav + footer
+    ("logo-square.png",     "logo-stacked-clear.png"),     # stacked lockup -> square/favicon contexts
+    # program section icons
+    ("icon-mindset.png",        "icon-mindset-clear.png"),
+    ("icon-financial.png",      "icon-financial-clear.png"),
+    ("icon-group.png",          "icon-group-clear.png"),
+    ("icon-certification.png",  "icon-certification-clear.png"),
+]
+
+
 if __name__ == "__main__":
-    process("logo-horizontal.png", "logo-horizontal-clear.png")
-    process("logo-square.png", "logo-square-clear.png")
+    for src, dst in JOBS:
+        process(src, dst)
