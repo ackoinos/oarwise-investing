@@ -137,3 +137,16 @@
 - Restored frosted glass on header (backdrop blur + translucent bg), but menu-open state now drops backdrop-filter to none + solid #000 so the mobile dropdown never bleeds.
 - Fixed the real remaining bug: mobile menu items overlapping (Schedule a Call on top of Why It Works). Cause was `max-height: 380px` clip too tight + no gap, squeezing flex items. Fixed with max-height 70vh, gap 6px, `li { flex: 0 0 auto }`, `a { display: block }`.
 - Verified CSS balance. Committed + pushed.
+
+---
+
+# 2026-09-06 - User Request
+
+> "cynthia, my girlfriend, said she doesn't like the black. she likes the hero though... can we make another version?"
+
+**Actions Taken:**
+- Created a LIGHT theme variant so both can be compared: `index-light.html` + `styles-light.css` (warm cream/white, dark text, darker tan + deeper green accents). Hero kept as-is (mountain-lake water photo, dark with overlay).
+- Extended `process-logos.py` with an `ink` param; generated dark line-art logo/icon variants from raw originals (`logo-wide-dark`, `logo-stacked-dark`, `icon-*-dark`) for use on light backgrounds. Fixed the wide/stacked filename swap.
+- Nav shows white logo over the dark hero at top, swaps to dark logo once scrolled onto the light page (+ mobile-menu-open forces dark). Footer stays dark so keeps white logo.
+- Footers cross-link the two themes. Light page set noindex so it doesn't compete with prod.
+- Verified all dark-variant assets resolve, single robots tag, CSS balanced. Committed + pushed.

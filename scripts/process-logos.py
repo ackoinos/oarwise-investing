@@ -26,9 +26,11 @@ LOW_THRESHOLD = 24
 HIGH_THRESHOLD = 120
 
 
-def knock_out_black(img: Image.Image) -> Image.Image:
-    """Recolor every kept pixel to pure white; use brightness only to derive a
-    clean alpha ramp between LOW and HIGH so strokes stay solid and crisp."""
+def knock_out_black(img: Image.Image, ink=(255, 255, 255)) -> Image.Image:
+    """Recolor every kept pixel to `ink`; use brightness only to derive a
+    clean alpha ramp between LOW and HIGH so strokes stay solid and crisp.
+    Default ink is white (for the dark theme); pass ink=(0,0,0) for a dark
+    line-art version suitable for a light background."""
     img = img.convert("RGBA")
     px = img.getdata()
     out = []
@@ -36,12 +38,12 @@ def knock_out_black(img: Image.Image) -> Image.Image:
     for r, g, b, a in px:
         v = max(r, g, b)
         if v <= LOW_THRESHOLD:
-            out.append((255, 255, 255, 0))          # background -> transparent
+            out.append((ink[0], ink[1], ink[2], 0))          # background -> transparent
         elif v >= HIGH_THRESHOLD:
-            out.append((255, 255, 255, 255))         # stroke -> solid white
+            out.append((ink[0], ink[1], ink[2], 255))         # stroke -> solid ink
         else:
-            alpha = int((v - LOW_THRESHOLD) / span * 255)  # anti-aliased edge
-            out.append((255, 255, 255, alpha))
+            alpha = int((v - LOW_THRESHOLD) / span * 255)     # anti-aliased edge
+            out.append((ink[0], ink[1], ink[2], alpha))
     img.putdata(out)
     return img
 
@@ -58,7 +60,7 @@ def autocrop(img: Image.Image, pad: int = 8) -> Image.Image:
     return img.crop((left, top, right, bottom))
 
 
-def process(src_name: str, dst_name: str) -> None:
+def process(src_name: str, dst_name: str, ink=(255, 255, 255)) -> None:
     src = IMAGES / src_name
     dst = IMAGES / dst_name
     if not src.exists():
@@ -66,27 +68,27 @@ def process(src_name: str, dst_name: str) -> None:
         return
     img = Image.open(src)
     before = img.size
-    img = knock_out_black(img)
+    img = knock_out_black(img, ink=ink)
     img = autocrop(img)
     img.save(dst)
-    print(f"OK  {src_name} {before} -> {dst_name} {img.size}")
+    print(f"OK  {src_name} {before} -> {dst_name} {img.size} ink={ink}")
 
 
-# (src, dst). Each source is white line-art on an opaque black background;
-# we knock the black out to transparency and autocrop so the art sits cleanly
-# on the dark site at its own natural aspect ratio (never stretched).
-JOBS = [
-    # official brand lockups (kept true to form, not re-oriented)
-    ("logo-horizontal.png", "logo-horizontal-clear.png"),  # horizontal lockup -> nav + footer
-    ("logo-square.png",     "logo-stacked-clear.png"),     # stacked lockup -> square/favicon contexts
-    # program section icons
-    ("icon-mindset.png",        "icon-mindset-clear.png"),
-    ("icon-financial.png",      "icon-financial-clear.png"),
-    ("icon-group.png",          "icon-group-clear.png"),
-    ("icon-certification.png",  "icon-certification-clear.png"),
+BLACK = (12, 12, 14)  # near-black ink for light theme (matches text color)
+
+# Raw originals live in images/original/ as CDN hashes (untouched white-on-black).
+# Generate DARK-INK transparent versions for the light theme from those raws.
+LIGHT_JOBS = [
+    ("original/66b3e7af31293577647b5d96.png", "logo-wide-dark.png"),        # horizontal lockup
+    ("original/66b3e8d1f487dd6c84e886d4.png", "logo-stacked-dark.png"),     # stacked lockup
+    ("original/670df1ac38ad6b39b9aeeeb6.png", "icon-mindset-dark.png"),
+    ("original/670df2280d429d83b41b39c0.png", "icon-financial-dark.png"),
+    ("original/670df692bd239006d0c1b75d.png", "icon-group-dark.png"),
+    ("original/670deef1b23cb134cd5d67b1.png", "icon-certification-dark.png"),
 ]
 
 
 if __name__ == "__main__":
-    for src, dst in JOBS:
-        process(src, dst)
+    # dark-ink line-art for the light theme
+    for src, dst in LIGHT_JOBS:
+        process(src, dst, ink=BLACK)
