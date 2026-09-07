@@ -28,11 +28,23 @@ Same pattern as harmony-myotherapy.
 2. **UAT (GitHub Pages):** Push to GitHub -> auto-deploys to a Pages URL. Free. Client review link for Darren.
 3. **Prod (Netlify):** Manual publish once approved, then point oarwiseinvesting.com at it.
 
+## Graphics
+Real brand assets were pulled from the original HighLevel site and reused (they are on-brand: white line-art on black with a signature water-ripple motif). Renamed from CDN hashes to readable names:
+- `images/logo-horizontal.png` - nav + footer logo (crossed oars + "OWI" + ripples)
+- `images/logo-square.png` - favicon + social share image
+- `images/darren.jpg` - Darren's headshot (whitewater backdrop), About section
+- `images/icon-mindset.png` - Mindset Mastery program (head + lightbulb + gear)
+- `images/icon-financial.png` - Financial Literacy program (person reading, $ signs)
+- `images/icon-group.png` - Group Coaching program (group + lightbulb + gear)
+- `images/icon-certification.png` - Certification program (certificate + ribbon)
+- `images/original/` - untouched CDN-hash originals kept as source archive
+
+Theme shifted to true black (option A) to match the white-on-black brand assets, with tan (#c6ac8f) retained as the accent for buttons/headings and green (#4bb573) for small cues.
+
 ## Outstanding / TODO
 See `todo.md`. Key open items:
-- Get Darren's headshot for the About section (`images/darren.jpg`)
 - Confirm the booking/CTA target (Calendly, or keep a HighLevel booking link if he uses the CRM side)
 - Confirm whether Darren is tied into HighLevel's CRM before killing the subscription
 - Real Terms & Conditions / Privacy Policy content (currently placeholder links)
-- Favicon + apple-touch-icon
+- Optional: generate a proper multi-res favicon.ico from the square logo
 - Create GitHub repo and push

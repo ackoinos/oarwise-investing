@@ -6,11 +6,13 @@
 - [x] Initialize git repo + first commit
 
 ## Content
-- [ ] Get Darren's headshot photo (drop in `images/darren.jpg`, swap out placeholder)
+- [x] Darren's headshot wired into About section (reused from original site)
+- [x] Real brand logo + program icons wired in (reused from original site)
+- [x] Favicon / apple-touch-icon set to square logo PNG
 - [ ] Confirm program details / topic bullets are accurate
 - [ ] Real Terms & Conditions page/content
 - [ ] Real Privacy Policy page/content
-- [ ] Favicon + apple-touch-icon
+- [ ] Optional: generate a proper multi-res favicon.ico from the square logo
 
 ## Functionality
 - [ ] Wire "Schedule a Call" CTA to the real booking link (Calendly or HighLevel)
