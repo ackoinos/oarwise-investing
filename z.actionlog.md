@@ -76,3 +76,18 @@
 - Extended `process-logos.py` to also process the 4 program icons. Gave all 4 icons the same black-knockout-to-transparency treatment so they float as white line-art on the cards instead of sitting in mismatched black tiles.
 - Simplified `.program-icon` CSS: removed the dark tile background + border, icons now sit transparent on the card.
 - Verified all 6 assets: pure-white solid pixels, 61-87% transparent backgrounds. Verified HTML paths + CSS balance. Updated readme + todo. Committed.
+
+---
+
+# 2026-09-06 - User Request
+
+> "anything else we can do?" / "let's do 1-5"
+
+**Actions Taken:**
+- SEO/polish pass (items 1-5):
+  1. Added JSON-LD ProfessionalService schema (founder Darren Cameron + Mindset/Financial offers) + robots, canonical, theme-color meta.
+  2. Generated favicon.ico (16/32/48) from the stacked logo on brand-black (`scripts/make-favicon.py`).
+  3. Created sitemap.xml + robots.txt.
+  4. Generated 1200x630 social share card (hero water + stacked logo + "Empower Your Oars" + tan subtitle) via `scripts/make-social-card.py`; wired to og:image/twitter:image with width/height/alt.
+  5. Added `scroll-margin-top: 88px` on section[id] so the sticky header no longer covers headings on anchor clicks.
+- Verified: JSON-LD parses valid, all assets resolve, CSS + HTML balanced. Updated todo. Committed.

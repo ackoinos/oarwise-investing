@@ -28,6 +28,9 @@
 
 html { scroll-behavior: smooth; }
 
+/* offset anchored sections so the sticky header doesn't cover their headings */
+section[id] { scroll-margin-top: 88px; }
+
 body {
     font-family: var(--body);
     color: var(--text);
