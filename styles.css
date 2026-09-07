@@ -65,8 +65,11 @@ img { max-width: 100%; display: block; }
 .btn-primary {
     background: linear-gradient(135deg, var(--tan-soft), var(--tan) 55%, #b3987a);
     color: #201a12;
+    border: none;
+    padding: 16px 32px;   /* +2px to match the 2px border on other buttons */
     box-shadow: 0 6px 18px rgba(198, 172, 143, 0.18);
 }
+.btn-primary.btn-lg { padding: 19px 42px; }
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 30px rgba(198, 172, 143, 0.38);

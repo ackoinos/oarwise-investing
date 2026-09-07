@@ -150,3 +150,14 @@
 - Nav shows white logo over the dark hero at top, swaps to dark logo once scrolled onto the light page (+ mobile-menu-open forces dark). Footer stays dark so keeps white logo.
 - Footers cross-link the two themes. Light page set noindex so it doesn't compete with prod.
 - Verified all dark-variant assets resolve, single robots tag, CSS balanced. Committed + pushed.
+
+---
+
+# 2026-09-06 - User Request
+
+> "some of the buttons have a faint black border around it"
+
+**Actions Taken:**
+- Cause: base `.btn` has `border: 2px solid transparent`; on the gradient primary buttons the transparent border box let a faint hairline edge show (visible on light theme, latent on dark).
+- Fix: `.btn-primary` now `border: none` with padding bumped +2px (16px 32px, lg 19px 42px) to preserve size. Applied to both styles.css and styles-light.css.
+- Verified both CSS balance. Committed + pushed.
