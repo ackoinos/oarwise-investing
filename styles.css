@@ -99,8 +99,8 @@ img { max-width: 100%; display: block; }
 }
 .is-scrolled .nav-container { padding: 12px 24px; }
 .logo { display: flex; align-items: center; gap: 10px; }
-.logo-img { height: 44px; width: auto; transition: height .3s ease; }
-.is-scrolled .logo-img { height: 38px; }
+.logo-img { height: 40px; width: auto; transition: height .3s ease; }
+.is-scrolled .logo-img { height: 34px; }
 .logo-mark { color: var(--green); display: flex; }
 .logo-text { font-family: var(--headline); font-weight: 700; font-size: 1.2rem; letter-spacing: 0.01em; }
 .logo-text em { color: var(--tan); font-style: normal; font-weight: 600; }

@@ -50,3 +50,16 @@
 - Pulled full-res (1920px, ~486KB) as `images/hero-water.jpg`, wired into hero via `.hero-bg` layer with dark brand-tinted overlay for legibility. Added text-shadow to hero h1/subtitle, brightened subtitle.
 - Removed the now-redundant animated "current" texture (photo carries the visual now) + orphaned keyframe. Deleted reject candidates folder.
 - Verified CSS balance, image paths, hero markup. Updated readme. Committed.
+
+---
+
+# 2026-09-06 - User Request
+
+> "the logo on the top and bottom are unrecognizable"
+
+**Actions Taken:**
+- Diagnosed: logo PNGs had an opaque black background (A:255) and heavy padding inside a square canvas, so on the dark site they showed as a black box with a tiny squashed mark. Also found the two source files were mislabeled (the "horizontal" file was actually the stacked/vertical logo and vice versa).
+- Wrote `scripts/process-logos.py` (Pillow): knocks out black to transparency, recolors kept pixels to pure white with a clean alpha ramp (first pass dimmed thin strokes; fixed via binary-ish knockout), auto-crops padding.
+- Verified objectively: all solid pixels are pure white (11741/11741, 7634/7634), crisp edges, transparent bg.
+- Produced `logo-wide.png` (437x135) + `logo-stacked.png` (249x396). Wired the wide transparent logo into nav + footer, adjusted logo height. Favicon/OG still use square original.
+- Verified image paths + HTML. Updated readme. Committed.

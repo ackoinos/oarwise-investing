@@ -30,8 +30,10 @@ Same pattern as harmony-myotherapy.
 
 ## Graphics
 Real brand assets were pulled from the original HighLevel site and reused (they are on-brand: white line-art on black with a signature water-ripple motif). Renamed from CDN hashes to readable names:
-- `images/logo-horizontal.png` - nav + footer logo (crossed oars + "OWI" + ripples)
-- `images/logo-square.png` - favicon + social share image
+- `images/logo-wide.png` - nav + footer logo. Processed from the original: black background knocked out to transparency and auto-cropped so the white line-art sits cleanly on the dark site. (The raw originals had an opaque black background baked in, which showed as an ugly box and squashed the mark inside excess padding.)
+- `images/logo-stacked.png` - vertical/stacked variant (oars over "OWI" over ripples), same transparent treatment. Spare, not currently placed.
+- `images/logo-horizontal.png` / `images/logo-square.png` - raw originals (opaque black bg). logo-square still used for favicon/social (black bg is fine at favicon size).
+- `scripts/process-logos.py` - reproducible logo cleanup (knockout + autocrop) via Pillow
 - `images/darren.jpg` - Darren's headshot (whitewater backdrop), About section
 - `images/icon-mindset.png` - Mindset Mastery program (head + lightbulb + gear)
 - `images/icon-financial.png` - Financial Literacy program (person reading, $ signs)
