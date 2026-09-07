@@ -91,3 +91,16 @@
   4. Generated 1200x630 social share card (hero water + stacked logo + "Empower Your Oars" + tan subtitle) via `scripts/make-social-card.py`; wired to og:image/twitter:image with width/height/alt.
   5. Added `scroll-margin-top: 88px` on section[id] so the sticky header no longer covers headings on anchor clicks.
 - Verified: JSON-LD parses valid, all assets resolve, CSS + HTML balanced. Updated todo. Committed.
+
+---
+
+# 2026-09-06 - User Request
+
+> "let's put it in git and generate a url for darren to access"
+
+**Actions Taken:**
+- Social card was already committed (b0d6f3f). Created public GitHub repo ackoinos/oarwise-investing and pushed main.
+- Enabled GitHub Pages (main branch, root). Build succeeded.
+- Verified live: page returns 200 with correct title; social-card.jpg, logo-wide.png, hero-water.jpg, styles.css, favicon.ico, sitemap.xml, robots.txt all serve 200.
+- **UAT link for Darren: https://ackoinos.github.io/oarwise-investing/**
+- Updated readme with repo + live URL.

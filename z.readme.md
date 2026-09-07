@@ -26,6 +26,8 @@ Same pattern as harmony-myotherapy.
 
 1. **Local (dev):** Edit files, preview by opening `index.html` in a browser. Zero cost.
 2. **UAT (GitHub Pages):** Push to GitHub -> auto-deploys to a Pages URL. Free. Client review link for Darren.
+   - Repo: https://github.com/ackoinos/oarwise-investing (public)
+   - **Live UAT link (send to Darren): https://ackoinos.github.io/oarwise-investing/**
 3. **Prod (Netlify):** Manual publish once approved, then point oarwiseinvesting.com at it.
 
 ## Graphics
@@ -57,5 +59,5 @@ See `todo.md`. Key open items:
 - Confirm the booking/CTA target (Calendly, or keep a HighLevel booking link if he uses the CRM side)
 - Confirm whether Darren is tied into HighLevel's CRM before killing the subscription
 - Real Terms & Conditions / Privacy Policy content (currently placeholder links)
-- Optional: generate a proper multi-res favicon.ico from the square logo
-- Create GitHub repo and push
+- Optional: generate a proper multi-res favicon.ico from the square logo (done)
+- Create GitHub repo and push (done -- live at https://ackoinos.github.io/oarwise-investing/)
