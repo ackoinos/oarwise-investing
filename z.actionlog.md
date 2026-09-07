@@ -21,3 +21,19 @@
 - Wired real graphics into `index.html`: nav + footer logo, Darren's photo in About, four matching program icons, favicon + OG social image (square logo).
 - Shifted theme to true black (option A) in `styles.css` to match white-on-black brand assets; kept tan accent. Added logo/footer-logo/program-icon image styles.
 - Verified all 6 image paths resolve, no leftover placeholders, HTML tags balanced. Updated readme + todo. Committed.
+
+---
+
+# 2026-09-06 - User Request
+
+> "cosmetically, how can we improve this?"
+
+**Actions Taken:**
+- `styles.css` cosmetic polish pass (all CSS-only, no new image deps):
+  - Fixed program-icon crop (cover -> contain + padding, bigger tile with subtle tan radial)
+  - Hero depth: layered radial glows, faint animated "current" texture (::before, reduced-motion safe), tan/green water-line accent under hero (::after)
+  - Buttons: tan gradient + soft glow on hover
+  - About photo: offset tan accent frame (editorial)
+  - Section rhythm: top hairline borders + faint corner glows on About/Programs/Approach so sections read as distinct panels
+  - Eyebrow labels: leading tan tick + more letter-spacing
+- Verified CSS brace/paren balance. Committed.
