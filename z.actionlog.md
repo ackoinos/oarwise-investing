@@ -126,3 +126,14 @@
 - First fix (solid dropdown bg) didn't resolve it -> real root cause was `backdrop-filter: blur` + translucent rgba header background bleeding the hero through the dropdown region.
 - Definitive fix: removed backdrop-filter entirely. Header is now transparent at top (over hero), solid #0a0a0c once scrolled. Menu-open forces solid #000 header (!important) regardless of scroll position, so the dropdown never shows bleed-through.
 - Verified: zero backdrop-filter refs, no translucent header bg, CSS balanced. Committed + pushed.
+
+---
+
+# 2026-09-06 - User Request
+
+> "wait! that didn't work. look at the menu, about ways to empower, schedule a call is on top of why it works" (+ keep frosted glass)
+
+**Actions Taken:**
+- Restored frosted glass on header (backdrop blur + translucent bg), but menu-open state now drops backdrop-filter to none + solid #000 so the mobile dropdown never bleeds.
+- Fixed the real remaining bug: mobile menu items overlapping (Schedule a Call on top of Why It Works). Cause was `max-height: 380px` clip too tight + no gap, squeezing flex items. Fixed with max-height 70vh, gap 6px, `li { flex: 0 0 auto }`, `a { display: block }`.
+- Verified CSS balance. Committed + pushed.
