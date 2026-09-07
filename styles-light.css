@@ -28,7 +28,7 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; background: var(--bg); }
 section[id] { scroll-margin-top: 88px; }
 
 body {
@@ -154,7 +154,7 @@ img { max-width: 100%; display: block; }
     align-items: center;
     padding: 150px 0 110px;
     overflow: hidden;
-    background: #000;
+    background: var(--bg-alt);   /* cream fallback so no black flashes during scroll */
 }
 .hero-bg {
     position: absolute;

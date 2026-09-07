@@ -161,3 +161,14 @@
 - Cause: base `.btn` has `border: 2px solid transparent`; on the gradient primary buttons the transparent border box let a faint hairline edge show (visible on light theme, latent on dark).
 - Fix: `.btn-primary` now `border: none` with padding bumped +2px (16px 32px, lg 19px 42px) to preserve size. Applied to both styles.css and styles-light.css.
 - Verified both CSS balance. Committed + pushed.
+
+---
+
+# 2026-09-06 - User Request
+
+> "when i scroll, i can still see the black" (light theme)
+
+**Actions Taken:**
+- Defensive fix: changed light-theme `.hero` base background from #000 to cream (var(--bg-alt)) and set explicit `html { background: var(--bg) }` so no black flashes during scroll momentum/overscroll.
+- Asked user to clarify whether they mean an overscroll flash vs the dark hero itself, since the fix differs.
+- Verified CSS balance. (Commit pending clarification.)
