@@ -104,3 +104,14 @@
 - Verified live: page returns 200 with correct title; social-card.jpg, logo-wide.png, hero-water.jpg, styles.css, favicon.ico, sitemap.xml, robots.txt all serve 200.
 - **UAT link for Darren: https://ackoinos.github.io/oarwise-investing/**
 - Updated readme with repo + live URL.
+
+---
+
+# 2026-09-06 - User Request
+
+> "when hitting the hamburger, this happens:" (mobile menu was semi-transparent, hero text bleeding through)
+
+**Actions Taken:**
+- Root cause: mobile dropdown background was rgba(15,16,20,0.98) sitting inside a translucent, backdrop-blurred header over true-black content, so hero text showed through.
+- Fixed: dropdown now solid #000 with a drop shadow. Header goes fully opaque when menu open via `.menu-open` class (JS toggle) + `:has()` fallback.
+- Verified CSS balance + JS consistency. Committed + pushed (UAT auto-updates).

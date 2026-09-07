@@ -269,14 +269,17 @@
             var toggle = document.querySelector('.nav-toggle');
             var links = document.querySelector('.nav-links');
             if (toggle && links) {
+                var siteHeader = document.querySelector('.site-header');
                 toggle.addEventListener('click', function () {
                     var open = links.classList.toggle('is-open');
                     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+                    if (siteHeader) { siteHeader.classList.toggle('menu-open', open); }
                 });
                 links.addEventListener('click', function (e) {
                     if (e.target.tagName === 'A') {
                         links.classList.remove('is-open');
                         toggle.setAttribute('aria-expanded', 'false');
+                        if (siteHeader) { siteHeader.classList.remove('menu-open'); }
                     }
                 });
             }
