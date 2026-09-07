@@ -38,6 +38,7 @@ Real brand assets were pulled from the original HighLevel site and reused (they 
 - `images/icon-group.png` - Group Coaching program (group + lightbulb + gear)
 - `images/icon-certification.png` - Certification program (certificate + ribbon)
 - `images/original/` - untouched CDN-hash originals kept as source archive
+- `images/hero-water.jpg` - hero backdrop: wooden rowboats moored at a mountain lake (Lago di Braies). Sourced from Unsplash (license: free for commercial use, no attribution required). Ties the "Empower Your Oars" theme to a literal oar/rowboat image. Sits behind a dark brand-tinted overlay for text legibility.
 
 Theme shifted to true black (option A) to match the white-on-black brand assets, with tan (#c6ac8f) retained as the accent for buttons/headings and green (#4bb573) for small cues.
 

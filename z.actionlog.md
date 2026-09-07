@@ -37,3 +37,16 @@
   - Section rhythm: top hairline borders + faint corner glows on About/Programs/Approach so sections read as distinct panels
   - Eyebrow labels: leading tan tick + more letter-spacing
 - Verified CSS brace/paren balance. Committed.
+
+---
+
+# 2026-09-06 - User Request
+
+> "any way we can find a stock image for the whitewater?" / "let's try cand4"
+
+**Actions Taken:**
+- Sourced hero backdrop candidates from Unsplash (free commercial license, no attribution required). Downloaded 6, eyeballed each.
+- Selected cand4: wooden rowboats moored at a mountain lake (Lago di Braies) - literal oar/rowboat tie-in to the brand.
+- Pulled full-res (1920px, ~486KB) as `images/hero-water.jpg`, wired into hero via `.hero-bg` layer with dark brand-tinted overlay for legibility. Added text-shadow to hero h1/subtitle, brightened subtitle.
+- Removed the now-redundant animated "current" texture (photo carries the visual now) + orphaned keyframe. Deleted reject candidates folder.
+- Verified CSS balance, image paths, hero markup. Updated readme. Committed.
