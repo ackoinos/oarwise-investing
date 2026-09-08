@@ -157,7 +157,7 @@ img { max-width: 100%; display: block; }
 .hero-bg {
     position: absolute;
     inset: 0;
-    background: url("images/hero-water.jpg") center 30% / cover no-repeat;
+    background: url("images/hero-water.jpg") center 72% / cover no-repeat;
     z-index: 0;
 }
 /* vivid gradient wash over the photo for the edgy pop */
@@ -166,9 +166,9 @@ img { max-width: 100%; display: block; }
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(900px 600px at 78% 15%, rgba(47, 214, 255, 0.28), transparent 55%),
-        radial-gradient(1000px 700px at 12% 95%, rgba(23, 230, 160, 0.26), transparent 55%),
-        linear-gradient(180deg, rgba(4,6,12,0.62) 0%, rgba(4,6,12,0.72) 60%, var(--bg) 100%);
+        radial-gradient(900px 600px at 78% 15%, rgba(47, 214, 255, 0.26), transparent 55%),
+        radial-gradient(1000px 700px at 12% 95%, rgba(23, 230, 160, 0.22), transparent 55%),
+        linear-gradient(180deg, rgba(4,6,12,0.6) 0%, rgba(4,6,12,0.34) 45%, rgba(4,6,12,0.3) 72%, var(--bg) 100%);
     mix-blend-mode: normal;
 }
 .hero-content { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 0 24px; text-align: center; }

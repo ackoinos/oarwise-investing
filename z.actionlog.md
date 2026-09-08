@@ -184,3 +184,14 @@
 - Uses the existing white line-art assets (dark base). noindex like the light preview.
 - Cross-linked all three themes in every footer (Dark / Light / Bold).
 - Verified edgy CSS balance, single robots tag, all assets resolve. Committed + pushed.
+
+---
+
+# 2026-09-06 - User Request
+
+> "the hero background. you can see the mountains, but not the boats nor the oars at the bottom."
+
+**Actions Taken:**
+- The boats/oars (the oar-metaphor payoff) sit at the bottom of the photo but the crop favored the top and the overlay was heaviest at the bottom, burying them.
+- Fixed across all three themes: background-position 30% -> 72% (pulls boats into frame while keeping peaks), and reworked the hero overlay to be lighter through the mid/lower band (was 55-72% black at bottom) so the boats read.
+- Verified all three CSS balance. Committed + pushed.
