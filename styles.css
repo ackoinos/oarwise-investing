@@ -154,7 +154,7 @@ img { max-width: 100%; display: block; }
 .hero-bg {
     position: absolute;
     inset: 0;
-    background: url("images/hero-water.jpg") center 66% / cover no-repeat;
+    background: url("images/hero-water.jpg") center 69% / cover no-repeat;
     z-index: 0;
 }
 /* darkening + brand-tint overlay so white copy stays readable */
