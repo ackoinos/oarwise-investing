@@ -172,3 +172,15 @@
 - Defensive fix: changed light-theme `.hero` base background from #000 to cream (var(--bg-alt)) and set explicit `html { background: var(--bg) }` so no black flashes during scroll momentum/overscroll.
 - Asked user to clarify whether they mean an overscroll flash vs the dark hero itself, since the fix differs.
 - Verified CSS balance. (Commit pending clarification.)
+
+---
+
+# 2026-09-06 - User Request
+
+> "can we produce a 3rd edgier version?"
+
+**Actions Taken:**
+- Built a 3rd "Bold/edgy" theme: `index-edgy.html` + `styles-edgy.css`. Dark ink-blue base (#06070d), electric green->cyan gradient accent (#17e6a0 / #2fd6ff), oversized uppercase type, gradient-clipped headline em, glowing gradient CTAs, sharper corners, neon top-border on program-card hover, gradient border ring on the About photo. Hero keeps the water photo with a more vivid colored wash.
+- Uses the existing white line-art assets (dark base). noindex like the light preview.
+- Cross-linked all three themes in every footer (Dark / Light / Bold).
+- Verified edgy CSS balance, single robots tag, all assets resolve. Committed + pushed.
