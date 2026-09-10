@@ -15,8 +15,14 @@
 - [ ] Optional: generate a proper multi-res favicon.ico from the square logo
 
 ## Functionality
-- [ ] Wire "Schedule a Call" CTA to the real booking link (Calendly or HighLevel)
+- [x] Wire "Schedule a Call" CTA to Darren's booking link (https://oarwiseinvesting.com/schedule-call-6978-4164) - verified 200
 - [ ] Decide contact method: mailto (current) vs a proper form (Netlify Forms is free)
+
+## Client decision (2026-09-08)
+- Darren picked the DARK version -> make it the primary going forward; light + edgy are alternates.
+- Darren is on Mastermind.com (coaching-business platform), pays monthly, undecided whether to stay.
+  Open question: does he use Mastermind for course delivery/payments/community, or mostly the website?
+  That decides whether the static rebuild replaces the fee or just the front-end.
 
 ## SEO / Polish (done 2026-09-06)
 - [x] JSON-LD structured data (ProfessionalService + founder + offers)

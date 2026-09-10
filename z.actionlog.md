@@ -195,3 +195,14 @@
 - The boats/oars (the oar-metaphor payoff) sit at the bottom of the photo but the crop favored the top and the overlay was heaviest at the bottom, burying them.
 - Fixed across all three themes: background-position 30% -> 72% (pulls boats into frame while keeping peaks), and reworked the hero overlay to be lighter through the mid/lower band (was 55-72% black at bottom) so the boats read.
 - Verified all three CSS balance. Committed + pushed.
+
+---
+
+# 2026-09-08 - User Request
+
+> Darren replied: likes the dark version, gave booking link (corrected to https://oarwiseinvesting.com/schedule-call-6978-4164), on Mastermind.com platform paying monthly, undecided whether to stay.
+
+**Actions Taken:**
+- Verified the booking URL resolves (HTTP 200, title "Schedule Your Call With Darren Cameron").
+- Wired it into the contact-section "Schedule a Call" button across all three themes (replacing the mailto placeholder). Nav/hero/program CTAs still scroll to #contact where the booking button lives (clean funnel). Email kept as secondary contact.
+- Noted client decision (dark wins) + open question re: Mastermind.com usage in todo. Committed + pushed.
