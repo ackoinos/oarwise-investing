@@ -206,3 +206,8 @@
 - Verified the booking URL resolves (HTTP 200, title "Schedule Your Call With Darren Cameron").
 - Wired it into the contact-section "Schedule a Call" button across all three themes (replacing the mailto placeholder). Nav/hero/program CTAs still scroll to #contact where the booking button lives (clean funnel). Email kept as secondary contact.
 - Noted client decision (dark wins) + open question re: Mastermind.com usage in todo. Committed + pushed.
+
+**Follow-up (same day):**
+- Promoted dark as the sole public version: removed the Dark/Light/Bold cross-links from all three footers. Kept index-light + index-edgy (and their CSS) as reference/alternate files, still noindex, not linked.
+- Drafted reply to Darren (`reply-to-darren.md`): dark confirmed, booking link wired, and the Mastermind question (just the site vs the business tools) to inform his stay/switch decision.
+- Committed + pushed.
